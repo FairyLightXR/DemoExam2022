@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F0D76D40-4B92-4823-9D49-7A1E541B6E9E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Practice_3_04</RootNamespace>
+    <AssemblyName>Practice 3-04</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddEditMaterialFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditMaterialFrm.Designer.cs">
+      <DependentUpon>AddEditMaterialFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelIEF\Agent.cs" />
+    <Compile Include="ModelIEF\AgentPriorityHistory.cs" />
+    <Compile Include="ModelIEF\AgentType.cs" />
+    <Compile Include="ModelIEF\Material.cs" />
+    <Compile Include="ModelIEF\MaterialCountHistory.cs" />
+    <Compile Include="ModelIEF\MaterialType.cs" />
+    <Compile Include="ModelIEF\PaperModel.cs" />
+    <Compile Include="ModelIEF\Product.cs" />
+    <Compile Include="ModelIEF\ProductCostHistory.cs" />
+    <Compile Include="ModelIEF\ProductMaterial.cs" />
+    <Compile Include="ModelIEF\ProductSale.cs" />
+    <Compile Include="ModelIEF\ProductType.cs" />
+    <Compile Include="ModelIEF\Shop.cs" />
+    <Compile Include="ModelIEF\Supplier.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddEditMaterialFrm.resx">
+      <DependentUpon>AddEditMaterialFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Practice_3_04.ModelIEF.Agent.datasource" />
+    <None Include="Properties\DataSources\Practice_3_04.ModelIEF.AgentPriorityHistory.datasource" />
+    <None Include="Properties\DataSources\Practice_3_04.ModelIEF.AgentType.datasource" />
+    <None Include="Properties\DataSources\Practice_3_04.ModelIEF.Material.datasource" />
+    <None Include="Properties\DataSources\Practice_3_04.ModelIEF.MaterialCountHistory.datasource" />
+    <None Include="Properties\DataSources\Practice_3_04.ModelIEF.MaterialType.datasource" />
+    <None Include="Properties\DataSources\Practice_3_04.ModelIEF.PaperModel.datasource" />
+    <None Include="Properties\DataSources\Practice_3_04.ModelIEF.Product.datasource" />
+    <None Include="Properties\DataSources\Practice_3_04.ModelIEF.ProductCostHistory.datasource" />
+    <None Include="Properties\DataSources\Practice_3_04.ModelIEF.ProductMaterial.datasource" />
+    <None Include="Properties\DataSources\Practice_3_04.ModelIEF.ProductSale.datasource" />
+    <None Include="Properties\DataSources\Practice_3_04.ModelIEF.ProductType.datasource" />
+    <None Include="Properties\DataSources\Practice_3_04.ModelIEF.Shop.datasource" />
+    <None Include="Properties\DataSources\Practice_3_04.ModelIEF.Supplier.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Черновик.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aaaaa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\materials\material_1.jpeg" />
+    <Resource Include="Resources\materials\material_10.jpeg" />
+    <Resource Include="Resources\materials\material_11.jpeg" />
+    <Resource Include="Resources\materials\material_12.jpeg" />
+    <Resource Include="Resources\materials\material_13.jpeg" />
+    <Resource Include="Resources\materials\material_14.jpeg" />
+    <Resource Include="Resources\materials\material_15.jpeg" />
+    <Resource Include="Resources\materials\material_16.jpeg" />
+    <Resource Include="Resources\materials\material_17.jpeg" />
+    <Resource Include="Resources\materials\material_18.jpeg" />
+    <Resource Include="Resources\materials\material_19.jpeg" />
+    <Resource Include="Resources\materials\material_2.jpeg" />
+    <Resource Include="Resources\materials\material_20.jpeg" />
+    <Resource Include="Resources\materials\material_21.jpeg" />
+    <Resource Include="Resources\materials\material_22.jpeg" />
+    <Resource Include="Resources\materials\material_23.jpeg" />
+    <Resource Include="Resources\materials\material_24.jpeg" />
+    <Resource Include="Resources\materials\material_25.jpeg" />
+    <Resource Include="Resources\materials\material_26.png" />
+    <Resource Include="Resources\materials\material_3.jpeg" />
+    <Resource Include="Resources\materials\material_4.jpeg" />
+    <Resource Include="Resources\materials\material_5.jpeg" />
+    <Resource Include="Resources\materials\material_6.jpeg" />
+    <Resource Include="Resources\materials\material_7.jpeg" />
+    <Resource Include="Resources\materials\material_8.jpeg" />
+    <Resource Include="Resources\materials\material_9.jpeg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
