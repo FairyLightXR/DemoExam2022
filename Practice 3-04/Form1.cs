@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Practice_3_04.ModelIEF;
+using Practice_3_04.Resources.materials;
 
 namespace Practice_3_04
 {
@@ -17,6 +18,7 @@ namespace Practice_3_04
         string search = ""; // строка поиска
         string sort = "Без сортировки"; // вид сортировка
         string filtr = "Все материалы"; // название производителя
+        public  static List<int> lstselectedIdData = new List<int>();
         public Form1()
         {
             InitializeComponent();
@@ -164,6 +166,25 @@ namespace Practice_3_04
 
                     MessageBox.Show(ex.Message);
                 }
+            }
+        }
+
+        private void BtnCostChange_Click(object sender, EventArgs e)
+        {
+            lstselectedIdData.Clear();
+            if (materialDataGridView.SelectedRows.Count>0)
+            {
+                foreach (DataGridViewRow row in materialDataGridView.SelectedRows)
+                {
+                    int id = (int)row.Cells[0].Value;
+                    lstselectedIdData.Add(id);
+                }
+            }
+            MinMaterialChangeForm minMaterialChangeForm = new MinMaterialChangeForm();
+            DialogResult dr = minMaterialChangeForm.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                Podgotovka();
             }
         }
     }

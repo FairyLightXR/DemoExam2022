@@ -30,7 +30,7 @@ namespace Practice_3_04
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.materialDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +56,7 @@ namespace Practice_3_04
             this.BtnAddMaterial = new System.Windows.Forms.Button();
             this.BtnEditMaterial = new System.Windows.Forms.Button();
             this.BtnDelMaterial = new System.Windows.Forms.Button();
+            this.BtnCostChange = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.materialDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialTypeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).BeginInit();
@@ -155,9 +156,9 @@ namespace Practice_3_04
             // 
             this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Cost";
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn8.HeaderText = "Цена";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
@@ -311,11 +312,22 @@ namespace Practice_3_04
             this.BtnDelMaterial.UseVisualStyleBackColor = true;
             this.BtnDelMaterial.Click += new System.EventHandler(this.BtnDelMaterial_Click);
             // 
+            // BtnCostChange
+            // 
+            this.BtnCostChange.Location = new System.Drawing.Point(407, 605);
+            this.BtnCostChange.Name = "BtnCostChange";
+            this.BtnCostChange.Size = new System.Drawing.Size(194, 23);
+            this.BtnCostChange.TabIndex = 9;
+            this.BtnCostChange.Text = "Изменить мин. стоимость на..";
+            this.BtnCostChange.UseVisualStyleBackColor = true;
+            this.BtnCostChange.Click += new System.EventHandler(this.BtnCostChange_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(980, 600);
+            this.ClientSize = new System.Drawing.Size(980, 640);
+            this.Controls.Add(this.BtnCostChange);
             this.Controls.Add(this.BtnDelMaterial);
             this.Controls.Add(this.BtnEditMaterial);
             this.Controls.Add(this.BtnAddMaterial);
@@ -368,6 +380,7 @@ namespace Practice_3_04
         private System.Windows.Forms.Button BtnAddMaterial;
         private System.Windows.Forms.Button BtnEditMaterial;
         private System.Windows.Forms.Button BtnDelMaterial;
+        private System.Windows.Forms.Button BtnCostChange;
     }
 }
 
